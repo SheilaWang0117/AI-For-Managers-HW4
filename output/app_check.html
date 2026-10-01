@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00356b">
+  <title>Campus Customs — Live App Check</title>
+  <style>
+    :root{font-family:Arial,Helvetica,sans-serif;color:#18314c;background:#f8f6ef;line-height:1.6;font-synthesis:none}
+    *{box-sizing:border-box}body{margin:0}.top{background:#00356b;color:#fff;padding:30px max(22px,calc((100vw - 960px)/2)) 28px;border-bottom:4px solid #d7bc77}.top p{margin:0;color:#e0e8ee;font-size:.82rem;letter-spacing:.09em;text-transform:uppercase}.top h1{font:400 clamp(2rem,5vw,3.35rem)/1.1 Georgia,'Times New Roman',serif;margin:.45rem 0}.top .date{font-size:.9rem;letter-spacing:0;text-transform:none;color:#eef2f4}.wrap{width:min(960px,calc(100% - 36px));margin:34px auto 54px}.intro{margin:0 0 22px;color:#526575}.check{background:#fffefa;border:1px solid #d9dfdb;border-radius:10px;margin:20px 0;padding:24px;box-shadow:0 8px 24px #142e4709}.number{font-size:.74rem;font-weight:700;letter-spacing:.12em;color:#856829;text-transform:uppercase;margin:0 0 5px}.check h2{font:400 clamp(1.45rem,3vw,2rem)/1.2 Georgia,'Times New Roman',serif;color:#00356b;margin:0 0 10px}.check p:not(.number){margin:0 0 16px;max-width:76ch;color:#405568}.shot{display:block;background:#e7edf0;border:1px solid #d3dddf;border-radius:6px;overflow:hidden}.shot img{display:block;width:100%;height:auto}.caption{font-size:.8rem;color:#5a6870;margin:9px 0 0}footer{border-top:1px solid #d7bc77;padding-top:17px;color:#687680;font-size:.82rem}
+    @media(max-width:560px){.top{padding:24px 19px 21px}.wrap{width:calc(100% - 24px);margin-top:18px}.check{padding:16px;margin:14px 0}.check h2{font-size:1.5rem}}
+    @media print{body{background:#fff}.top{padding:18px 25px}.wrap{width:100%;margin:16px auto}.check{break-inside:avoid;box-shadow:none;margin:12px 0;padding:14px}.shot{max-height:70vh}.shot img{max-height:68vh;object-fit:contain}a{color:inherit}footer{padding-bottom:20px}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <p>Campus Customs · HW 4 · Problem 11</p>
+    <h1>Live storefront check</h1>
+    <p class="date">Captured October 1, 2026 · Local site · Handsome Dan chat checked live</p>
+  </header>
+  <main class="wrap">
+    <p class="intro">Three screenshots from the running shop. Chat answers came from the live agent; the price, stock, and product cards were checked against the local catalogue API.</p>
+
+    <section class="check" aria-labelledby="inventory-title">
+      <p class="number">Check 1 · Inventory truth</p>
+      <h2 id="inventory-title">Handsome Dan checks the item’s price and size stock</h2>
+      <p>Asked about the Ua Gameday Double Knit Hood, the live chat reported <strong>$45.00</strong> and <strong>8 in size M</strong>, matching the product’s recorded database fields. The screenshot shows the shopper’s question and the answer beside the actual product detail page.</p>
+      <figure>
+        <a class="shot" href="app_check_images/inventory.png"><img src="app_check_images/inventory.png" alt="Ua Gameday Double Knit Hood detail page with Handsome Dan answering that the price is $45.00 and size M has 8 in stock"></a>
+        <figcaption class="caption">Open the image in a new tab by clicking it.</figcaption>
+      </figure>
+    </section>
+
+    <section class="check" aria-labelledby="search-title">
+      <p class="number">Check 2 · Chat search</p>
+      <h2 id="search-title">A hoodie question adds matching product cards to the page</h2>
+      <p>After “What hoodies do you have?”, the page displayed six cards from <strong>27 catalogue matches</strong>, each with an image, name, price, and short description. The live check compared every displayed card to the catalogue API.</p>
+      <figure>
+        <a class="shot" href="app_check_images/category-search.png"><img src="app_check_images/category-search.png" alt="Handsome Dan’s Finds showing six hoodie product cards, with a total of 27 matches"></a>
+        <figcaption class="caption">The cards are the same clickable items used elsewhere in the store.</figcaption>
+      </figure>
+    </section>
+
+    <section class="check" aria-labelledby="usability-title">
+      <p class="number">Check 3 · P9 usability</p>
+      <h2 id="usability-title">A page-specific starter creates an editable question</h2>
+      <p>On a product page, the <strong>Similar items in M</strong> button filled the chat box with “Find similar items in medium that are in stock.” It did not send automatically, so the shopper can edit the question before sending.</p>
+      <figure>
+        <a class="shot" href="app_check_images/p9-prompt-starter.png"><img src="app_check_images/p9-prompt-starter.png" alt="Product page and Handsome Dan panel with page-specific prompt chips and a selected similar-items question in the editable chat box"></a>
+        <figcaption class="caption">This is the live site; chat messages above the starter remain visible for context.</figcaption>
+      </figure>
+    </section>
+
+    <footer>Evidence from the running Campus Customs app · Chat used a temporary guest session · No account chat history or catalogue records were changed for this check.</footer>
+  </main>
+</body>
+</html>
